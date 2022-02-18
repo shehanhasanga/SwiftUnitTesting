@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var vm:UnitTestViewModel
+    init(isPremium:Bool){
+        _vm = StateObject(wrappedValue: UnitTestViewModel(ispremium: isPremium))
+    }
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text(vm.isPremium.description)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(isPremium: true)
     }
 }

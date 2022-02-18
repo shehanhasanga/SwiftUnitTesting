@@ -11,7 +11,7 @@ import SwiftUI
 struct UnittestApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(isPremium: true)
         }
     }
 }
